@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static '/css/blog.css' %}">
+
+</head>
+<body>
+    <header>
+        <div id="brand">
+            <h1>Shakib's Blog</h1>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <a href="{% url 'blog:post_list' %}"><li>Home</li></a>
+                <a href=""><li>Blog</li></a>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        {% block content %}{% endblock content %}
+    </div>
+</body>
+</html>

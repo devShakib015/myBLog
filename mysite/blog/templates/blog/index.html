@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+    {% block content %}
+        {% for post in published_posts %}
+            <a href="{% url 'blog:post_detail' post.slug %}"><h1>{{ post.title }}</h1></a>
+            <small>Written by {{ post.author }} - {{ post.publish }}</small>
+            <p>{{ post.body|truncatewords:30|linebreaks }}</p>
+            <br>
+        {% empty %}
+        <p>There are no posts available.</p>
+        {% endfor %}
+    {% endblock content %}

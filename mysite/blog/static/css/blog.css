@@ -1,0 +1,61 @@
+html{
+    box-sizing: border-box;
+    color: white;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(36, 35, 35);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background: cadetblue;
+}
+
+#brand{
+    width: 50%;
+    text-align: center;
+
+}
+#navbar{
+    width: 50%;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li{
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+#navbar ul a:hover{
+    color: rgb(20, 20, 20);
+}
+
+#content{
+    width: 70%;
+    border: 2px solid white;
+    margin: 20px auto;
+    padding: 20px;
+}
