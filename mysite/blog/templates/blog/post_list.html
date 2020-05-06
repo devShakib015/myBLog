@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% block title %}Shakib's blog | Blog{% endblock title %}
+    {% block content %}
+        {% for post in p_p %}
+            <a class="link_title" href="{% url 'blog:post_detail' post.slug %}"><h1>{{ post.title }}</h1></a>
+            <small>Written by {{ post.author }} - {{ post.publish }}</small>
+            <p>{{ post.body|truncatewords:30|linebreaksbr }}</p>
+            <br>
+        {% empty %}
+        <p>There are no posts available.</p>
+        {% endfor %}
+        {% include "blog\pagination.html" with page=page_obj %}
+    {% endblock content %}

@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
+{% block title %}{{ post.title }}{% endblock title %}
     {% block content %}
         <h1>{{ post.title }}</h1>
         <small>Written by {{ post.author }} - {{ post.publish }}</small>
-        <p>{{ post.body|linebreaks }}</p>
+        <p>{{ post.body|linebreaksbr }}</p>
     {% endblock content %}

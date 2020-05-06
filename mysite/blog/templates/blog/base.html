@@ -10,12 +10,13 @@
 <body>
     <header>
         <div id="brand">
-            <h1>Shakib's Blog</h1>
+            <a href="{% url 'blog:index' %}"><h1>Shakib's Blog</h1></a>
+            
         </div>
         <nav id="navbar">
             <ul>
-                <a href="{% url 'blog:post_list' %}"><li>Home</li></a>
-                <a href=""><li>Blog</li></a>
+                <a href="{% url 'blog:index' %}"><li>Home</li></a>
+                <a href="{% url 'blog:post_list' %}"><li>Blog</li></a>
                 
             </ul>
         </nav>

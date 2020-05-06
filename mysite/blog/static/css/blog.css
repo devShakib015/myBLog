@@ -1,8 +1,8 @@
 html{
     box-sizing: border-box;
-    color: white;
+    color: rgb(214, 209, 209);
     font-size: medium;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
 }
 
@@ -58,4 +58,29 @@ header{
     border: 2px solid white;
     margin: 20px auto;
     padding: 20px;
+}
+
+#welcome{
+    text-align: center;
+    font-size: 60px;
+}
+
+.link_title{
+    color: wheat;
+}
+
+.link_title:hover{
+    color: whitesmoke;
+}
+
+.pagination-position{
+    text-align: center;
+}
+
+.pagination-position a{
+    color: turquoise;
+}
+
+.pagination-position a:hover{
+    color: white;
 }
