@@ -4,4 +4,7 @@
         <h1>{{ post.title }}</h1>
         <small>Written by {{ post.author }} - {{ post.publish }}</small>
         <p>{{ post.body|linebreaksbr }}</p>
+        <p>
+            <a href="{% url 'blog:post_share' post.id %}">Share this Post</a>
+        </p>
     {% endblock content %}
