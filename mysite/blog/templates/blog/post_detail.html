@@ -3,8 +3,40 @@
     {% block content %}
         <h1>{{ post.title }}</h1>
         <small>Written by {{ post.author }} - {{ post.publish }}</small>
-        <p>{{ post.body|linebreaksbr }}</p>
+        <p>{{ post.body|linebreaks }}</p>
         <p>
             <a href="{% url 'blog:post_share' post.id %}">Share this Post</a>
         </p>
+        {% with comments.count as total_comments %}
+            <h2>
+                This post has {{ total_comments }} comment{{ total_comments|pluralize }}.
+            </h2>
+        {% endwith %}
+        {% for comment in comments %}
+            <div style="padding: 15px;">
+                <small>
+                    Comment {{ forloop.counter }} by {{ comment.name }} in {{ comment.created }}
+                </small>
+                <p style="border-top: 1px solid;">{{ comment.body|linebreaks }}</p>
+            </div>
+        {% empty %}
+            <p>There are no comments yet.</p>
+        {% endfor %}
+
+        {% if new_comment %}
+            <h3>Your comment has been added</h3>
+            <h2>Add another comment.</h2>
+            <form action="." method="post">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <input class="button" type="submit" value="Add Comment">
+            </form>
+        {% else %}
+            <h2>Add a new comment.</h2>
+            <form action="." method="post">
+                {% csrf_token %}
+                {{ comment_form.as_p }}
+                <input class="button" type="submit" value="Add Comment">
+            </form>
+        {% endif %}
     {% endblock content %}
