@@ -1,13 +1,31 @@
 {% extends 'blog/base.html' %}
 {% block title %}Shakib's blog | Blog{% endblock title %}
     {% block content %}
-        {% for post in p_p %}
+    {% if tag %}
+        <h2>Posts tagged with "{{ tag.name }}"</h2>
+    {% endif %}
+    
+    {% for post in p_p %}
+        <div class="post_card">
             <a class="link_title" href="{% url 'blog:post_detail' post.slug %}"><h1>{{ post.title }}</h1></a>
+            <p>
+                Tags:
+                {% for tag in post.tags.all %}
+                    <a href="{% url 'blog:post_list_by_tag' tag.slug %}"> {{ tag.name }}</a>
+                    {% if not forloop.last %}, {% endif%}
+                {% endfor %}
+            </p>
             <small>Written by {{ post.author }} - {{ post.publish }}</small>
-            <p>{{ post.body|truncatewords:30|linebreaksbr }}</p>
+            <p>{{ post.body|truncatewords:60|linebreaksbr }}</p>
             <br>
+        </div> 
+                
         {% empty %}
-        <p>There are no posts available.</p>
-        {% endfor %}
-        {% include "blog\pagination.html" with page=page_obj %}
+        <div class="post_card">
+            <p>There are no posts available.</p>
+        </div>
+    {% endfor %}
+
+    
+    {% include "blog\pagination.html" with page=p_p %}
     {% endblock content %}

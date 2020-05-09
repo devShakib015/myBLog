@@ -12,7 +12,12 @@ li{
 
 a{
     text-decoration: none;
+    color: teal;
+}
+
+a:hover{
     color: white;
+    transition: 0.5s;
 }
 
 body{
@@ -33,7 +38,9 @@ header{
 #brand{
     width: 50%;
     text-align: center;
-
+}
+#brand a{
+    color: white;
 }
 #navbar{
     width: 50%;
@@ -49,15 +56,24 @@ header{
     font-size: 20px;
 }
 
+#navbar ul a{
+    color: white;
+}
+
 #navbar ul a:hover{
-    color: rgb(20, 20, 20);
+    color: rgb(0, 0, 0);
 }
 
 #content{
     width: 70%;
-    border: 2px solid white;
     margin: 20px auto;
+    padding: 10px;
+}
+
+.post_card{
+    box-shadow: 0 0 3px 2px black;
     padding: 20px;
+    margin-bottom: 25px;
 }
 
 #welcome{
@@ -66,7 +82,7 @@ header{
 }
 
 .link_title{
-    color: wheat;
+    color: cadetblue;
 }
 
 .link_title:hover{
@@ -78,7 +94,7 @@ header{
 }
 
 .pagination-position a{
-    color: turquoise;
+    color: cadetblue;
 }
 
 .pagination-position a:hover{
@@ -86,11 +102,12 @@ header{
 }
 
 form{
+    margin-top: -20px;
     padding-left: 15px;
     line-height: 2;
+    width: 400px;
     display: flex;
     flex-direction: column;
-    width: 30%;
 }
 form p{
     display: flex;
@@ -98,17 +115,33 @@ form p{
 }
 
 .button{
-    width: auto;
     justify-self: end;
     border: none;
     padding: 10px;
     color: white;
-    background: teal;
+    background: cadetblue;
 }
 
-form p input, textarea {
-	border: none;
-	width: 100%;
-	padding: 5px;
-	border-radius: 5px;
+.button:hover{
+    color: black;
+    background: white;
+    transition: 0.5s;
+}
+
+form p input{
+    border: transparent;
+	border-bottom: 2px solid white;
+    width: 100%;
+    background: transparent;
+    padding: 5px;
+    color: white;
+}
+
+form p textarea{
+    border: transparent;
+	border: 2px solid white;
+    width: 100%;
+    background: transparent;
+    padding: 5px;
+    color: white;
 }

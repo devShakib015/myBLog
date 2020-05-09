@@ -2,6 +2,7 @@
 {% block title %}{{ post.title }}{% endblock title %}
     {% block content %}
         <h1>{{ post.title }}</h1>
+        <p>Tags: {{ post.tags.all|join:", "}}</p>
         <small>Written by {{ post.author }} - {{ post.publish }}</small>
         <p>{{ post.body|linebreaks }}</p>
         <p>
@@ -25,14 +26,14 @@
 
         {% if new_comment %}
             <h3>Your comment has been added</h3>
-            <h2>Add another comment.</h2>
+            <h2>Add another comment:</h2>
             <form action="." method="post">
                 {% csrf_token %}
                 {{ comment_form.as_p }}
                 <input class="button" type="submit" value="Add Comment">
             </form>
         {% else %}
-            <h2>Add a new comment.</h2>
+            <h2>Add a new comment:</h2>
             <form action="." method="post">
                 {% csrf_token %}
                 {{ comment_form.as_p }}
