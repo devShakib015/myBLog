@@ -104,9 +104,8 @@ def post_search(request):
             search_vector = SearchVector('title', 'body')
             results = Post.objects.annotate(
                 search=search_vector,
-                rank=SearchRank(search_vector, search_query),
-                similarity = TrigramSimilarity('title', query)
-            ).filter(similarity__gt=0.3).order_by('-similarity')
+                rank=SearchRank(search_vector, search_query)
+            ).filter(search=query).order_by('-rank')
         
     context = {
         'form': form,

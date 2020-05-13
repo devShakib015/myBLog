@@ -1,13 +1,23 @@
 {% extends 'blog/base.html' %}
+{% load blog_tags %}
 {% block title %}lazyProgs{% endblock title %}
     {% block content %}
         <div  id="welcome">
             <h1>Welcome to lazyProgs</h1>
             <small>Let's make a change...</small>
         </div> 
-        <div style="height: 45vh;">
-
+        <div id="content">
+            <div id="block" class="big-box" style="justify-content: space-evenly;">
+                <div>
+                    <h2>Latest Posts: </h2>
+                    <small>Total posts: {% total_posts %}</small>
+                    {% show_latest_posts 3 %}
+                </div>
+                <div>
+                    <h2>Most Commented Posts: </h2>
+                    <small>Total comments: {% total_comments %}</small>
+                    {% show_most_commented_posts 3 %}
+                </div>
+            </div>
         </div>
-            
-        
     {% endblock content %}

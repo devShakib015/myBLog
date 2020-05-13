@@ -7,6 +7,11 @@ html{
     letter-spacing: 0.3px;
 }
 
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+}
+
 li{
     list-style: none;
 }
@@ -70,6 +75,8 @@ header{
 #navbar ul{
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 #navbar ul li{
@@ -123,13 +130,17 @@ header{
 }
 
 form{
-    margin-top: -20px;
     padding-left: 15px;
     line-height: 2;
     width: 400px;
     display: flex;
     flex-direction: column;
 }
+
+form label{
+    display: none;
+}
+
 form p{
     display: flex;
     flex-direction: column;
@@ -177,4 +188,40 @@ form p textarea{
     width: 25%;
     box-shadow: 0 0 3px 2px black;
     padding: 15px;
+}
+
+#search{
+    display: flex;
+    width: 400px;
+    margin: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+#search label{
+    display: none
+}
+
+#search input{
+    border: none;
+    height: 40px;
+    background: rgba(12, 34, 45, 0.3);
+}
+
+#button.button{
+    border: none;
+    background: rgba(4, 57, 66, 0.7);
+}
+
+#button.button:hover{
+    background: rgb(174, 214, 209);
+    color: black;
+}
+
+#block{
+    margin: 150 0 145 0;
+}
+
+#footer{
+    border-top: 2px solid white;
 }

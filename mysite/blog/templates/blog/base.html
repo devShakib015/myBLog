@@ -17,31 +17,21 @@
             <ul>
                 <a href="{% url 'blog:index' %}"><li>Home</li></a>
                 <a href="{% url 'blog:post_list' %}"><li>Blog</li></a>
-                <a href="{% url 'blog:post_search' %}"><li>Search</li></a>
+                <li>{% show_search_form %}</li>
                 
             </ul>
         </nav>
+        <div></div>
+                
     </header>
 
     <div id="content">
         {% block content %}{% endblock content %}
     </div>
-    <div id="footer">
+    <div id="content">
         {% block footer %}
-        <div class="big-box" style="justify-content: space-evenly;">
-            <div>
-                <h2>Latest Posts: </h2>
-                {% show_latest_posts 3 %}
-            </div>
-            <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                <p>Total posts: {% total_posts %}</p>
-                <p>Total comments: {% total_comments %}</p>
-            </div>
-
-            <div>
-                <h2>Most Commented Posts: </h2>
-                {% show_most_commented_posts 3 %}
-            </div>
+        <div id="footer" class="big-box" style="justify-content: space-evenly;">
+            <small>Made by Shakib</small>
         </div>
     {% endblock footer %}
     </div>
