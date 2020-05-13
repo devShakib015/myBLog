@@ -8,7 +8,7 @@ html{
 }
 
 h1,h2{
-    margin: 0;
+    margin: 10px 0 10px 0;
     padding: 0;
 }
 
@@ -98,7 +98,7 @@ header{
 .post_card{
     box-shadow: 0 0 3px 2px black;
     padding: 20px;
-    margin-bottom: 25px;
+    margin: 25px;
 }
 
 #welcome{
@@ -193,7 +193,7 @@ form p textarea{
 }
 
 .small-box{
-    width: 25%;
+    width: 28%;
     box-shadow: 0 0 3px 2px black;
     padding: 15px;
 }
