@@ -177,4 +177,5 @@ form p textarea{
     width: 25%;
     box-shadow: 0 0 3px 2px black;
     padding: 15px;
+    text-align: center;
 }
