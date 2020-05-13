@@ -18,7 +18,7 @@ small{
 
 a{
     text-decoration: none;
-    color: teal;
+    color: cadetblue;
 }
 
 a:hover{
@@ -35,7 +35,7 @@ p{
 body{
     margin: 0;
     padding: 0;
-    background: rgb(36, 35, 35);
+    background: rgb(32, 32, 32);
 }
 
 header{
@@ -100,11 +100,10 @@ header{
 #welcome{
     text-align: center;
     font-size: 40px;
-    line-height: 0;
 }
 
 .link_title{
-    color: cadetblue;
+    color:cadetblue);
 }
 
 .link_title:hover{
@@ -141,7 +140,7 @@ form p{
     border: none;
     padding: 10px;
     color: white;
-    background: cadetblue;
+    background: rgb(4, 57, 66);
 }
 
 .button:hover{

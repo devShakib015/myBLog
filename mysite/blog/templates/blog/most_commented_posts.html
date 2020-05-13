@@ -1,0 +1,7 @@
+<ul>
+    {% for post in m_c_p %}
+        <li>
+            <a class="link_title" href="{% url 'blog:post_detail' post.slug %}">{{ post.title }} - {{ post.comments.count }}</a>
+        </li>
+    {% endfor %}
+</ul>
