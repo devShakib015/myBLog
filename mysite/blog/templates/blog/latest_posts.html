@@ -1,7 +1,7 @@
 <ul>
     {% for post in l_t %}
         <li>
-            <a class="link_title" href="{% url 'blog:post_detail' post.slug %}">{{ post.title }}</a>
+            <a class="link_title" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
         </li>
     {% endfor %}
 </ul>

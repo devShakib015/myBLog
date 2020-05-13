@@ -14,7 +14,7 @@
     
     {% for post in p_p %}
         <div class="post_card">
-            <a class="link_title" href="{% url 'blog:post_detail' post.slug %}"><h1>{{ post.title }}</h1></a>
+            <a class="link_title" href="{{ post.get_absolute_url }}"><h1>{{ post.title }}</h1></a>
             <p>
                 Tags:
                 {% for tag in post.tags.all %}
