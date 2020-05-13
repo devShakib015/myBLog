@@ -23,7 +23,7 @@ a{
 }
 
 a:hover{
-    color: white;
+    color: cadetblue;
     transition: 0.5s;
 }
 
@@ -36,7 +36,11 @@ p{
 body{
     margin: 0;
     padding: 0;
-    background: rgb(32, 32, 32);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://wallpaperplay.com/walls/full/b/0/1/277928.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 header{
@@ -45,7 +49,7 @@ header{
     align-items: center;
     width: 100%;
     height: auto;
-    background: cadetblue;
+    background: transparent;
 }
 
 #brand{
@@ -86,7 +90,7 @@ header{
 }
 
 #navbar ul a:hover{
-    color: rgb(0, 0, 0);
+    color: cadetblue;
 }
 
 #content{
@@ -96,7 +100,7 @@ header{
 }
 
 .post_card{
-    box-shadow: 0 0 3px 2px black;
+    box-shadow: 0 0 3px 2px cadetblue;
     padding: 20px;
     margin: 25px;
 }
@@ -194,7 +198,7 @@ form p textarea{
 
 .small-box{
     width: 28%;
-    box-shadow: 0 0 3px 2px black;
+    box-shadow: 0 0 3px 2px cadetblue;
     padding: 15px;
 }
 
@@ -213,12 +217,13 @@ form p textarea{
 #search input{
     border: none;
     height: 40px;
-    background: rgba(12, 34, 45, 0.3);
+    background: cadetblue;
 }
 
 #button.button{
     border: none;
-    background: rgba(4, 57, 66, 0.7);
+    background: cadetblue;
+    border-left: 0.5px solid rgba(255, 255, 255, 0.4);
 }
 
 #button.button:hover{
