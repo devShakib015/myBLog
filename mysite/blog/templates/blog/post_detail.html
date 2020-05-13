@@ -11,8 +11,11 @@
             {% endfor %}
         </p>
         <small>Written by {{ post.author }} - {{ post.publish }}</small>
-        <p>{{ post.body|markdown }}</p>
-        <p>
+        <div class="details">
+            <p>{{ post.body|markdown }}</p>
+        </div>
+        
+        <p class="share">
             <a href="{% url 'blog:post_share' post.id %}">Share this Post</a>
         </p>
 
