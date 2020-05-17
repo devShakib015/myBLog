@@ -33,7 +33,6 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
-    'account.apps.AccountConfig',
     'taggit',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -130,11 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
-LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'login'
-LOGOUT_URL = 'logout'
-
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # SMTP Gmail
