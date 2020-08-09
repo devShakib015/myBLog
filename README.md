@@ -1,2 +1,1 @@
-# myBLog
- It's Shakib's Blog
+# myBLog using Django
